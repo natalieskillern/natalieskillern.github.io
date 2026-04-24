@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -19,685 +18,683 @@
     --gold: #c8a96e;
   }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
 
-body {
-background: var(–white);
-color: var(–black);
-font-family: ‘Barlow’, sans-serif;
-font-weight: 300;
-overflow-x: hidden;
-}
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
 
-/* NAV */
-nav {
-position: fixed;
-top: 0; left: 0; right: 0;
-z-index: 100;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1.4rem 3rem;
-mix-blend-mode: normal;
-background: rgba(248,246,242,0.92);
-backdrop-filter: blur(12px);
-border-bottom: 1px solid rgba(0,0,0,0.08);
-transition: all 0.3s ease;
-}
-.nav-name {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-weight: 600;
-font-size: 0.85rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-color: var(–black);
-text-decoration: none;
-}
-.nav-links {
-display: flex;
-gap: 2.5rem;
-list-style: none;
-}
-.nav-links a {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.75rem;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-color: var(–grey-dark);
-text-decoration: none;
-transition: color 0.2s;
-}
-.nav-links a:hover { color: var(–black); }
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 3rem;
+    mix-blend-mode: normal;
+    background: rgba(248,246,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  .nav-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey-dark);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--black); }
 
-/* HERO */
-.hero {
-min-height: 100vh;
-display: grid;
-grid-template-columns: 1fr 1fr;
-position: relative;
-overflow: hidden;
-}
-.hero-image-side {
-position: relative;
-background: var(–black);
-overflow: hidden;
-}
-.hero-image-side::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-}
-.hero-photo-placeholder {
-position: absolute;
-inset: 0;
-display: flex;
-align-items: flex-end;
-padding: 3rem;
-}
-.hero-photo-label {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.7rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: rgba(255,255,255,0.3);
-}
-/* Big geometric accent */
-.hero-image-side::after {
-content: ‘NS’;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 22vw;
-font-weight: 300;
-color: rgba(255,255,255,0.04);
-line-height: 1;
-pointer-events: none;
-}
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-image-side {
+    position: relative;
+    background: var(--black);
+    overflow: hidden;
+  }
+  .hero-image-side::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  }
+  .hero-photo-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+  }
+  .hero-photo-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+  }
+  /* Big geometric accent */
+  .hero-image-side::after {
+    content: 'NS';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22vw;
+    font-weight: 300;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
 
-.hero-content {
-display: flex;
-flex-direction: column;
-justify-content: center;
-padding: 8rem 5rem 5rem 5rem;
-position: relative;
-}
-.hero-eyebrow {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.22em;
-text-transform: uppercase;
-color: var(–grey-mid);
-margin-bottom: 1.5rem;
-animation: fadeUp 0.8s ease 0.2s both;
-}
-.hero-name {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(3rem, 5vw, 5.5rem);
-font-weight: 300;
-line-height: 1.0;
-color: var(–black);
-margin-bottom: 1rem;
-animation: fadeUp 0.8s ease 0.35s both;
-}
-.hero-name em {
-font-style: italic;
-color: var(–grey-dark);
-display: block;
-font-size: 0.65em;
-}
-.hero-title {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 1.1rem;
-font-weight: 400;
-letter-spacing: 0.06em;
-color: var(–grey-dark);
-margin-bottom: 2.5rem;
-line-height: 1.6;
-animation: fadeUp 0.8s ease 0.5s both;
-}
-.hero-tags {
-display: flex;
-flex-wrap: wrap;
-gap: 0.5rem;
-margin-bottom: 3rem;
-animation: fadeUp 0.8s ease 0.65s both;
-}
-.tag {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.68rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-border: 1px solid var(–grey-light);
-color: var(–grey-dark);
-padding: 0.35rem 0.85rem;
-}
-.hero-cta {
-display: flex;
-gap: 1rem;
-animation: fadeUp 0.8s ease 0.8s both;
-}
-.btn-primary {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.75rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-background: var(–black);
-color: var(–white);
-padding: 0.9rem 2rem;
-text-decoration: none;
-transition: background 0.2s, transform 0.2s;
-display: inline-block;
-}
-.btn-primary:hover { background: var(–grey-dark); transform: translateY(-1px); }
-.btn-secondary {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.75rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-border: 1px solid var(–black);
-color: var(–black);
-padding: 0.9rem 2rem;
-text-decoration: none;
-transition: all 0.2s;
-display: inline-block;
-}
-.btn-secondary:hover { background: var(–black); color: var(–white); }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 5rem 5rem 5rem;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.0;
+    color: var(--black);
+    margin-bottom: 1rem;
+    animation: fadeUp 0.8s ease 0.35s both;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--grey-dark);
+    display: block;
+    font-size: 0.65em;
+  }
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--grey-dark);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    animation: fadeUp 0.8s ease 0.5s both;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.8s ease 0.65s both;
+  }
+  .tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border: 1px solid var(--grey-light);
+    color: var(--grey-dark);
+    padding: 0.35rem 0.85rem;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    animation: fadeUp 0.8s ease 0.8s both;
+  }
+  .btn-primary {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: var(--black);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--grey-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: 1px solid var(--black);
+    color: var(--black);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-secondary:hover { background: var(--black); color: var(--white); }
 
-/* SECTION BASE */
-section { padding: 6rem 0; }
-.section-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
-.section-label {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.68rem;
-letter-spacing: 0.24em;
-text-transform: uppercase;
-color: var(–grey-mid);
-margin-bottom: 0.75rem;
-}
-.section-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(2rem, 4vw, 3.5rem);
-font-weight: 300;
-line-height: 1.1;
-margin-bottom: 3rem;
-}
-.rule {
-width: 40px;
-height: 1px;
-background: var(–black);
-margin-bottom: 3rem;
-}
+  /* SECTION BASE */
+  section { padding: 6rem 0; }
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 3rem;
+  }
+  .rule {
+    width: 40px;
+    height: 1px;
+    background: var(--black);
+    margin-bottom: 3rem;
+  }
 
-/* SUMMARY */
-.summary { background: var(–cream); }
-.summary-grid {
-display: grid;
-grid-template-columns: 1fr 1.6fr;
-gap: 5rem;
-align-items: start;
-}
-.summary-stat {
-margin-bottom: 2rem;
-}
-.stat-number {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 4rem;
-font-weight: 300;
-line-height: 1;
-color: var(–black);
-}
-.stat-label {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-color: var(–grey-mid);
-margin-top: 0.25rem;
-}
-.summary-text p {
-font-size: 1.05rem;
-line-height: 1.8;
-color: var(–grey-dark);
-margin-bottom: 1.25rem;
-}
-.summary-featured {
-margin-top: 2rem;
-padding: 1.5rem;
-border-left: 2px solid var(–gold);
-background: rgba(200,169,110,0.05);
-}
-.summary-featured p {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.15rem;
-font-style: italic;
-color: var(–black);
-margin: 0;
-line-height: 1.6;
-}
+  /* SUMMARY */
+  .summary { background: var(--cream); }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .summary-stat {
+    margin-bottom: 2rem;
+  }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--black);
+  }
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-top: 0.25rem;
+  }
+  .summary-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--grey-dark);
+    margin-bottom: 1.25rem;
+  }
+  .summary-featured {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-left: 2px solid var(--gold);
+    background: rgba(200,169,110,0.05);
+  }
+  .summary-featured p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--black);
+    margin: 0;
+    line-height: 1.6;
+  }
 
-/* APPROACH */
-.approach { background: var(–black); color: var(–white); }
-.approach .section-label { color: var(–grey-mid); }
-.approach .section-title { color: var(–white); }
-.approach .rule { background: var(–gold); }
-.approach-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 4rem;
-}
-.approach-column h3 {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.75rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 2rem;
-}
-.approach-item {
-display: flex;
-gap: 1.5rem;
-margin-bottom: 2.5rem;
-padding-bottom: 2.5rem;
-border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.approach-item:last-child { border-bottom: none; }
-.approach-number {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 2.5rem;
-font-weight: 300;
-color: rgba(255,255,255,0.1);
-line-height: 1;
-flex-shrink: 0;
-width: 2rem;
-}
-.approach-item-content h4 {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 1rem;
-font-weight: 500;
-letter-spacing: 0.06em;
-color: var(–white);
-margin-bottom: 0.5rem;
-}
-.approach-item-content p {
-font-size: 0.9rem;
-line-height: 1.65;
-color: rgba(255,255,255,0.5);
-}
+  /* APPROACH */
+  .approach { background: var(--black); color: var(--white); }
+  .approach .section-label { color: var(--grey-mid); }
+  .approach .section-title { color: var(--white); }
+  .approach .rule { background: var(--gold); }
+  .approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .approach-column h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+  .approach-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .approach-item:last-child { border-bottom: none; }
+  .approach-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.1);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2rem;
+  }
+  .approach-item-content h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .approach-item-content p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.5);
+  }
 
-/* EXPERIENCE */
-.experience-list { display: flex; flex-direction: column; gap: 0; }
-.exp-item {
-display: grid;
-grid-template-columns: 200px 1fr;
-gap: 3rem;
-padding: 3rem 0;
-border-bottom: 1px solid var(–grey-light);
-position: relative;
-}
-.exp-item:first-child { border-top: 1px solid var(–grey-light); }
-.exp-meta {}
-.exp-period {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-color: var(–grey-mid);
-margin-bottom: 0.4rem;
-}
-.exp-company {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.4rem;
-font-weight: 400;
-color: var(–black);
-line-height: 1.2;
-}
-.exp-location {
-font-family: ‘Barlow’, sans-serif;
-font-size: 0.78rem;
-color: var(–grey-mid);
-margin-top: 0.25rem;
-}
-.exp-content {}
-.exp-role {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 1.1rem;
-font-weight: 500;
-letter-spacing: 0.04em;
-color: var(–black);
-margin-bottom: 1rem;
-}
-.exp-desc {
-font-size: 0.92rem;
-line-height: 1.75;
-color: var(–grey-dark);
-}
-.exp-highlights {
-display: flex;
-flex-wrap: wrap;
-gap: 0.4rem;
-margin-top: 1.2rem;
-}
-.highlight-tag {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.65rem;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-color: var(–grey-dark);
-background: var(–grey-light);
-padding: 0.2rem 0.6rem;
-}
+  /* EXPERIENCE */
+  .experience-list { display: flex; flex-direction: column; gap: 0; }
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--grey-light);
+    position: relative;
+  }
+  .exp-item:first-child { border-top: 1px solid var(--grey-light); }
+  .exp-meta {}
+  .exp-period {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: 0.4rem;
+  }
+  .exp-company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.2;
+  }
+  .exp-location {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.78rem;
+    color: var(--grey-mid);
+    margin-top: 0.25rem;
+  }
+  .exp-content {}
+  .exp-role {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+  .exp-desc {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--grey-dark);
+  }
+  .exp-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+  }
+  .highlight-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grey-dark);
+    background: var(--grey-light);
+    padding: 0.2rem 0.6rem;
+  }
 
-/* PROJECTS */
-.projects { background: var(–cream); }
-.projects-grid {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 1.5rem;
-}
-.project-card {
-background: var(–white);
-padding: 2.5rem;
-position: relative;
-overflow: hidden;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-cursor: default;
-}
-.project-card:hover {
-transform: translateY(-4px);
-box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-}
-.project-card::before {
-content: ‘’;
-position: absolute;
-top: 0; left: 0; right: 0;
-height: 2px;
-background: var(–black);
-transform: scaleX(0);
-transition: transform 0.3s ease;
-transform-origin: left;
-}
-.project-card:hover::before { transform: scaleX(1); }
-.project-number {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 3.5rem;
-font-weight: 300;
-color: var(–grey-light);
-line-height: 1;
-margin-bottom: 1rem;
-}
-.project-title {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.4rem;
-font-weight: 400;
-color: var(–black);
-margin-bottom: 0.75rem;
-line-height: 1.3;
-}
-.project-desc {
-font-size: 0.875rem;
-line-height: 1.7;
-color: var(–grey-dark);
-margin-bottom: 1.5rem;
-}
-.project-skills {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.62rem;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-color: var(–grey-mid);
-line-height: 1.8;
-}
-.project-card.featured {
-background: var(–black);
-color: var(–white);
-grid-column: span 2;
-}
-.project-card.featured .project-number { color: rgba(255,255,255,0.1); }
-.project-card.featured .project-title { color: var(–white); }
-.project-card.featured .project-desc { color: rgba(255,255,255,0.55); }
-.project-card.featured .project-skills { color: var(–gold); }
-.project-card.featured::before { background: var(–gold); }
-.project-badge {
-position: absolute;
-top: 2rem; right: 2rem;
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.6rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-color: var(–gold);
-border: 1px solid var(–gold);
-padding: 0.2rem 0.6rem;
-}
+  /* PROJECTS */
+  .projects { background: var(--cream); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .project-card {
+    background: var(--white);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--black);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+  .project-card:hover::before { transform: scaleX(1); }
+  .project-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--grey-light);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .project-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  .project-desc {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--grey-dark);
+    margin-bottom: 1.5rem;
+  }
+  .project-skills {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    line-height: 1.8;
+  }
+  .project-card.featured {
+    background: var(--black);
+    color: var(--white);
+    grid-column: span 2;
+  }
+  .project-card.featured .project-number { color: rgba(255,255,255,0.1); }
+  .project-card.featured .project-title { color: var(--white); }
+  .project-card.featured .project-desc { color: rgba(255,255,255,0.55); }
+  .project-card.featured .project-skills { color: var(--gold); }
+  .project-card.featured::before { background: var(--gold); }
+  .project-badge {
+    position: absolute;
+    top: 2rem; right: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 0.2rem 0.6rem;
+  }
 
-/* TIMELINE */
-.timeline { background: var(–black); color: var(–white); overflow: hidden; }
-.timeline .section-title { color: var(–white); }
-.timeline .section-label { color: var(–grey-mid); }
-.timeline .rule { background: var(–gold); }
-.timeline-track {
-display: flex;
-gap: 0;
-position: relative;
-margin-top: 3rem;
-}
-.timeline-track::before {
-content: ‘’;
-position: absolute;
-top: 24px;
-left: 0; right: 0;
-height: 1px;
-background: rgba(255,255,255,0.15);
-}
-.timeline-item {
-flex: 1;
-padding-top: 3.5rem;
-position: relative;
-padding-right: 2rem;
-}
-.timeline-dot {
-position: absolute;
-top: 18px;
-left: 0;
-width: 13px;
-height: 13px;
-border: 2px solid var(–gold);
-background: var(–black);
-border-radius: 50%;
-transition: background 0.2s;
-}
-.timeline-item:hover .timeline-dot { background: var(–gold); }
-.timeline-period {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.62rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-color: var(–gold);
-margin-bottom: 0.4rem;
-}
-.timeline-co {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.15rem;
-color: var(–white);
-margin-bottom: 0.25rem;
-}
-.timeline-role {
-font-family: ‘Barlow’, sans-serif;
-font-size: 0.78rem;
-color: rgba(255,255,255,0.4);
-line-height: 1.4;
-}
+  /* TIMELINE */
+  .timeline { background: var(--black); color: var(--white); overflow: hidden; }
+  .timeline .section-title { color: var(--white); }
+  .timeline .section-label { color: var(--grey-mid); }
+  .timeline .rule { background: var(--gold); }
+  .timeline-track {
+    display: flex;
+    gap: 0;
+    position: relative;
+    margin-top: 3rem;
+  }
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 0; right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+  .timeline-item {
+    flex: 1;
+    padding-top: 3.5rem;
+    position: relative;
+    padding-right: 2rem;
+  }
+  .timeline-dot {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border: 2px solid var(--gold);
+    background: var(--black);
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+  .timeline-item:hover .timeline-dot { background: var(--gold); }
+  .timeline-period {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .timeline-co {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+  .timeline-role {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.4;
+  }
 
-/* SKILLS */
-.skills-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 2rem;
-}
-.skill-group h4 {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.7rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–grey-mid);
-margin-bottom: 1rem;
-padding-bottom: 0.5rem;
-border-bottom: 1px solid var(–grey-light);
-}
-.skill-list {
-list-style: none;
-display: flex;
-flex-direction: column;
-gap: 0.5rem;
-}
-.skill-list li {
-font-size: 0.88rem;
-color: var(–grey-dark);
-padding-left: 0.75rem;
-position: relative;
-}
-.skill-list li::before {
-content: ‘—’;
-position: absolute;
-left: 0;
-color: var(–grey-light);
-font-size: 0.7rem;
-}
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .skill-group h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--grey-light);
+  }
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .skill-list li {
+    font-size: 0.88rem;
+    color: var(--grey-dark);
+    padding-left: 0.75rem;
+    position: relative;
+  }
+  .skill-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--grey-light);
+    font-size: 0.7rem;
+  }
 
-/* EDUCATION */
-.education { background: var(–cream); }
-.edu-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2rem;
-}
-.edu-card {
-padding: 2.5rem;
-background: var(–white);
-border-left: 3px solid var(–black);
-}
-.edu-degree {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.3rem;
-font-weight: 400;
-color: var(–black);
-margin-bottom: 0.4rem;
-}
-.edu-school {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.8rem;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-color: var(–grey-mid);
-margin-bottom: 0.25rem;
-}
-.edu-year {
-font-family: ‘Barlow’, sans-serif;
-font-size: 0.82rem;
-color: var(–grey-mid);
-}
+  /* EDUCATION */
+  .education { background: var(--cream); }
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .edu-card {
+    padding: 2.5rem;
+    background: var(--white);
+    border-left: 3px solid var(--black);
+  }
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 0.4rem;
+  }
+  .edu-school {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: 0.25rem;
+  }
+  .edu-year {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.82rem;
+    color: var(--grey-mid);
+  }
 
-/* CONTACT */
-.contact { background: var(–black); color: var(–white); }
-.contact .section-label { color: var(–grey-mid); }
-.contact .section-title { color: var(–white); }
-.contact .rule { background: var(–gold); }
-.contact-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 5rem;
-align-items: start;
-}
-.contact-intro {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: 1.4rem;
-font-style: italic;
-line-height: 1.6;
-color: rgba(255,255,255,0.7);
-}
-.contact-links { display: flex; flex-direction: column; gap: 1.5rem; }
-.contact-link-item {
-display: flex;
-flex-direction: column;
-gap: 0.2rem;
-}
-.contact-link-label {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.65rem;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–gold);
-}
-.contact-link-value {
-font-family: ‘Barlow’, sans-serif;
-font-size: 0.95rem;
-color: var(–white);
-text-decoration: none;
-transition: color 0.2s;
-}
-.contact-link-value:hover { color: var(–gold); }
+  /* CONTACT */
+  .contact { background: var(--black); color: var(--white); }
+  .contact .section-label { color: var(--grey-mid); }
+  .contact .section-title { color: var(--white); }
+  .contact .rule { background: var(--gold); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+  }
+  .contact-links { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-link-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .contact-link-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .contact-link-value {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-link-value:hover { color: var(--gold); }
 
-/* FOOTER */
-footer {
-background: var(–black);
-border-top: 1px solid rgba(255,255,255,0.06);
-padding: 2rem 3rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-footer p {
-font-family: ‘Barlow Condensed’, sans-serif;
-font-size: 0.68rem;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-color: rgba(255,255,255,0.25);
-}
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
 
-/* ANIMATIONS */
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(24px); }
-to   { opacity: 1; transform: translateY(0); }
-}
-.reveal {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible {
-opacity: 1;
-transform: translateY(0);
-}
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-.hero { grid-template-columns: 1fr; }
-.hero-image-side { min-height: 40vh; }
-.hero-content { padding: 5rem 2rem 4rem; }
-nav { padding: 1.2rem 1.5rem; }
-.nav-links { gap: 1.2rem; }
-.section-inner { padding: 0 1.5rem; }
-.summary-grid, .approach-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-.exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
-.projects-grid { grid-template-columns: 1fr; }
-.project-card.featured { grid-column: span 1; }
-.skills-grid { grid-template-columns: 1fr 1fr; }
-.timeline-track { flex-direction: column; gap: 2rem; }
-.timeline-track::before { display: none; }
-.timeline-item { padding-top: 0; padding-left: 2rem; }
-.timeline-dot { top: 4px; }
-}
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-image-side { min-height: 40vh; }
+    .hero-content { padding: 5rem 2rem 4rem; }
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { gap: 1.2rem; }
+    .section-inner { padding: 0 1.5rem; }
+    .summary-grid, .approach-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .timeline-track { flex-direction: column; gap: 2rem; }
+    .timeline-track::before { display: none; }
+    .timeline-item { padding-top: 0; padding-left: 2rem; }
+    .timeline-dot { top: 4px; }
+  }
 </style>
-
 </head>
 <body>
 
 <!-- NAV -->
-
 <nav>
   <a href="#" class="nav-name">Natalie Skillern</a>
   <ul class="nav-links">
@@ -710,7 +707,6 @@ nav { padding: 1.2rem 1.5rem; }
 </nav>
 
 <!-- HERO -->
-
 <section class="hero" id="top">
   <div class="hero-image-side">
     <div class="hero-photo-placeholder">
@@ -742,7 +738,6 @@ nav { padding: 1.2rem 1.5rem; }
 </section>
 
 <!-- ABOUT / SUMMARY -->
-
 <section class="summary" id="about">
   <div class="section-inner">
     <p class="section-label reveal">Summary</p>
@@ -771,7 +766,6 @@ nav { padding: 1.2rem 1.5rem; }
 </section>
 
 <!-- APPROACH -->
-
 <section class="approach">
   <div class="section-inner">
     <p class="section-label reveal">Philosophy</p>
@@ -831,7 +825,6 @@ nav { padding: 1.2rem 1.5rem; }
 </section>
 
 <!-- EXPERIENCE -->
-
 <section id="experience">
   <div class="section-inner">
     <p class="section-label reveal">Experience</p>
@@ -839,122 +832,118 @@ nav { padding: 1.2rem 1.5rem; }
     <div class="rule reveal"></div>
     <div class="experience-list">
 
-```
-  <div class="exp-item reveal">
-    <div class="exp-meta">
-      <div class="exp-period">2025 – Present</div>
-      <div class="exp-company">ReefLabs LLC</div>
-      <div class="exp-location">Beaverton, OR</div>
-    </div>
-    <div class="exp-content">
-      <div class="exp-role">Startup Founder</div>
-      <p class="exp-desc">Unprecedented, innovative surf and swim accessory in early-stage development. Concept creation, MVP development, strategic planning for future development phases, and marketplace research.</p>
-      <div class="exp-highlights">
-        <span class="highlight-tag">Product Innovation</span>
-        <span class="highlight-tag">Action Sports</span>
-        <span class="highlight-tag">Startup Strategy</span>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-period">2025 – Present</div>
+          <div class="exp-company">ReefLabs LLC</div>
+          <div class="exp-location">Beaverton, OR</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Startup Founder</div>
+          <p class="exp-desc">Unprecedented, innovative surf and swim accessory in early-stage development. Concept creation, MVP development, strategic planning for future development phases, and marketplace research.</p>
+          <div class="exp-highlights">
+            <span class="highlight-tag">Product Innovation</span>
+            <span class="highlight-tag">Action Sports</span>
+            <span class="highlight-tag">Startup Strategy</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="exp-item reveal">
-    <div class="exp-meta">
-      <div class="exp-period">2024 – Present</div>
-      <div class="exp-company">Plaace</div>
-      <div class="exp-location">Beaverton, OR</div>
-    </div>
-    <div class="exp-content">
-      <div class="exp-role">Startup Founder</div>
-      <p class="exp-desc">AI-powered travel planning platform using machine learning algorithms to auto-populate personalized travel itineraries. Created and conceptualized the product/service, developed an MVP, conducted financial projections, built business models, completed marketplace research, and submitted pitches to angel investors.</p>
-      <div class="exp-highlights">
-        <span class="highlight-tag">AI/ML Product</span>
-        <span class="highlight-tag">MVP Development</span>
-        <span class="highlight-tag">Angel Investor Pitches</span>
-        <span class="highlight-tag">Financial Modeling</span>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-period">2024 – Present</div>
+          <div class="exp-company">Plaace</div>
+          <div class="exp-location">Beaverton, OR</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Startup Founder</div>
+          <p class="exp-desc">AI-powered travel planning platform using machine learning algorithms to auto-populate personalized travel itineraries. Created and conceptualized the product/service, developed an MVP, conducted financial projections, built business models, completed marketplace research, and submitted pitches to angel investors.</p>
+          <div class="exp-highlights">
+            <span class="highlight-tag">AI/ML Product</span>
+            <span class="highlight-tag">MVP Development</span>
+            <span class="highlight-tag">Angel Investor Pitches</span>
+            <span class="highlight-tag">Financial Modeling</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="exp-item reveal">
-    <div class="exp-meta">
-      <div class="exp-period">2023 – 2025</div>
-      <div class="exp-company">Nike Inc.</div>
-      <div class="exp-location">Beaverton, OR</div>
-    </div>
-    <div class="exp-content">
-      <div class="exp-role">Project Manager — Stretch Assignment, Nike Innovation, SPACE</div>
-      <p class="exp-desc">Led end-to-end product positioning and internal go-to-market strategy for confidential innovations, aligning product, science, manufacturing, and business stakeholders. Led project teams through end-to-end product creation, working with patents and scaling to manufacture. Developed technical narratives to support buy-in, funding approval, and athlete adoption. Supported early market validation through controlled rollouts at Olympic Trials, EU Championships, and the 2024 Paris Olympics.</p>
-      <div class="exp-highlights">
-        <span class="highlight-tag">Innovation PM</span>
-        <span class="highlight-tag">Patent Development</span>
-        <span class="highlight-tag">Paris Olympics</span>
-        <span class="highlight-tag">Go-to-Market</span>
-        <span class="highlight-tag">Manufacturing Scale</span>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-period">2023 – 2025</div>
+          <div class="exp-company">Nike Inc.</div>
+          <div class="exp-location">Beaverton, OR</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Project Manager — Stretch Assignment, Nike Innovation, SPACE</div>
+          <p class="exp-desc">Led end-to-end product positioning and internal go-to-market strategy for confidential innovations, aligning product, science, manufacturing, and business stakeholders. Led project teams through end-to-end product creation, working with patents and scaling to manufacture. Developed technical narratives to support buy-in, funding approval, and athlete adoption. Supported early market validation through controlled rollouts at Olympic Trials, EU Championships, and the 2024 Paris Olympics.</p>
+          <div class="exp-highlights">
+            <span class="highlight-tag">Innovation PM</span>
+            <span class="highlight-tag">Patent Development</span>
+            <span class="highlight-tag">Paris Olympics</span>
+            <span class="highlight-tag">Go-to-Market</span>
+            <span class="highlight-tag">Manufacturing Scale</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="exp-item reveal">
-    <div class="exp-meta">
-      <div class="exp-period">2019 – Present</div>
-      <div class="exp-company">Nike Inc.</div>
-      <div class="exp-location">Beaverton, OR</div>
-    </div>
-    <div class="exp-content">
-      <div class="exp-role">Senior Applied Apparel Researcher — Nike Sport Research Lab</div>
-      <p class="exp-desc">Led mixed-methods consumer research to identify unmet consumer needs and inform apparel design decisions. End-to-end execution of scientific studies: framing business questions, designing methodology, executing research, synthesizing insights, and delivering recommendations. Authored internal manuscripts and presentations that shaped product decisions and business narratives. Contributed to innovations featured in TIME Magazine, Peacock, Outside Magazine, and Unisport.</p>
-      <div class="exp-highlights">
-        <span class="highlight-tag">Applied Research</span>
-        <span class="highlight-tag">TIME Best Inventions 2023</span>
-        <span class="highlight-tag">Mixed Methods</span>
-        <span class="highlight-tag">Insight Synthesis</span>
-        <span class="highlight-tag">Technical Storytelling</span>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-period">2019 – Present</div>
+          <div class="exp-company">Nike Inc.</div>
+          <div class="exp-location">Beaverton, OR</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Senior Applied Apparel Researcher — Nike Sport Research Lab</div>
+          <p class="exp-desc">Led mixed-methods consumer research to identify unmet consumer needs and inform apparel design decisions. End-to-end execution of scientific studies: framing business questions, designing methodology, executing research, synthesizing insights, and delivering recommendations. Authored internal manuscripts and presentations that shaped product decisions and business narratives. Contributed to innovations featured in TIME Magazine, Peacock, Outside Magazine, and Unisport.</p>
+          <div class="exp-highlights">
+            <span class="highlight-tag">Applied Research</span>
+            <span class="highlight-tag">TIME Best Inventions 2023</span>
+            <span class="highlight-tag">Mixed Methods</span>
+            <span class="highlight-tag">Insight Synthesis</span>
+            <span class="highlight-tag">Technical Storytelling</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="exp-item reveal">
-    <div class="exp-meta">
-      <div class="exp-period">2019</div>
-      <div class="exp-company">Hurley Int.</div>
-      <div class="exp-location">Costa Mesa, CA</div>
-    </div>
-    <div class="exp-content">
-      <div class="exp-role">Innovator</div>
-      <p class="exp-desc">Worked with the VP of Innovation and product development team editing CADs, BOMs, and tech packs. Conceptualized and designed an innovative product, managed collaboration with external partners, and leveraged scientific insights to inform the design team.</p>
-      <div class="exp-highlights">
-        <span class="highlight-tag">Product Design</span>
-        <span class="highlight-tag">Innovation</span>
-        <span class="highlight-tag">Scientific Insights</span>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-period">2019</div>
+          <div class="exp-company">Hurley Int.</div>
+          <div class="exp-location">Costa Mesa, CA</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Innovator</div>
+          <p class="exp-desc">Worked with the VP of Innovation and product development team editing CADs, BOMs, and tech packs. Conceptualized and designed an innovative product, managed collaboration with external partners, and leveraged scientific insights to inform the design team.</p>
+          <div class="exp-highlights">
+            <span class="highlight-tag">Product Design</span>
+            <span class="highlight-tag">Innovation</span>
+            <span class="highlight-tag">Scientific Insights</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="exp-item reveal">
-    <div class="exp-meta">
-      <div class="exp-period">2012 – 2015</div>
-      <div class="exp-company">Marisa Baratelli Inc.</div>
-      <div class="exp-location">Solana Beach, CA</div>
-    </div>
-    <div class="exp-content">
-      <div class="exp-role">Wholesale Executive Account Representative</div>
-      <p class="exp-desc">Built and managed wholesale accounts, attended top national women's apparel markets and tradeshows. Regularly met with New York buying offices to perfect sales strategies. Conceptualized, merchandised, and managed seasonal trunk shows. Managed branded collateral, social media, marketing material, return authorizations, factory costing, and quality control.</p>
-      <div class="exp-highlights">
-        <span class="highlight-tag">Wholesale Fashion</span>
-        <span class="highlight-tag">Account Management</span>
-        <span class="highlight-tag">Brand Strategy</span>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-period">2012 – 2015</div>
+          <div class="exp-company">Marisa Baratelli Inc.</div>
+          <div class="exp-location">Solana Beach, CA</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Wholesale Executive Account Representative</div>
+          <p class="exp-desc">Built and managed wholesale accounts, attended top national women's apparel markets and tradeshows. Regularly met with New York buying offices to perfect sales strategies. Conceptualized, merchandised, and managed seasonal trunk shows. Managed branded collateral, social media, marketing material, return authorizations, factory costing, and quality control.</p>
+          <div class="exp-highlights">
+            <span class="highlight-tag">Wholesale Fashion</span>
+            <span class="highlight-tag">Account Management</span>
+            <span class="highlight-tag">Brand Strategy</span>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </div>
 </section>
 
 <!-- PROJECTS -->
-
 <section class="projects" id="projects">
   <div class="section-inner">
     <p class="section-label reveal">Portfolio</p>
@@ -962,58 +951,54 @@ nav { padding: 1.2rem 1.5rem; }
     <div class="rule reveal"></div>
     <div class="projects-grid">
 
-```
-  <div class="project-card reveal">
-    <div class="project-number">01</div>
-    <div class="project-title">Nike Confidential Apparel Innovation I</div>
-    <p class="project-desc">Conceptualized an innovative apparel product assisting athletes across their sporting journey. Led a team of five, built business relationships, and worked cross-functionally with key business partners. Researched and landscaped the marketplace, conducted thorough scientific review, and developed a platform for the product to excel.</p>
-    <div class="project-skills">Innovation PM · Concept Creation · Strategic Planning · Applied Scientific Research · Athlete-Centered</div>
-  </div>
+      <div class="project-card reveal">
+        <div class="project-number">01</div>
+        <div class="project-title">Nike Confidential Apparel Innovation I</div>
+        <p class="project-desc">Conceptualized an innovative apparel product assisting athletes across their sporting journey. Led a team of five, built business relationships, and worked cross-functionally with key business partners. Researched and landscaped the marketplace, conducted thorough scientific review, and developed a platform for the product to excel.</p>
+        <div class="project-skills">Innovation PM · Concept Creation · Strategic Planning · Applied Scientific Research · Athlete-Centered</div>
+      </div>
 
-  <div class="project-card featured reveal">
-    <div class="project-badge">Paris Olympics 2024</div>
-    <div class="project-number">02</div>
-    <div class="project-title">Nike Confidential Apparel Innovation II</div>
-    <p class="project-desc">Led a team of six through end-to-end product creation with financial backing and cross-functional partnerships. Collaborated closely with factory partners to scale production and innovate method of make to reduce manufacturing costs. Conducted scientific testing with elite athletes. Featured at the 2024 Chicago Marathon, Olympic Trials, European Soccer Championships, and the Paris Olympics.</p>
-    <div class="project-skills">Innovation PM · Team Leadership · Patent Development · Production & Scaling · Elite Athlete Insights · Storytelling</div>
-  </div>
+      <div class="project-card featured reveal">
+        <div class="project-badge">Paris Olympics 2024</div>
+        <div class="project-number">02</div>
+        <div class="project-title">Nike Confidential Apparel Innovation II</div>
+        <p class="project-desc">Led a team of six through end-to-end product creation with financial backing and cross-functional partnerships. Collaborated closely with factory partners to scale production and innovate method of make to reduce manufacturing costs. Conducted scientific testing with elite athletes. Featured at the 2024 Chicago Marathon, Olympic Trials, European Soccer Championships, and the Paris Olympics.</p>
+        <div class="project-skills">Innovation PM · Team Leadership · Patent Development · Production & Scaling · Elite Athlete Insights · Storytelling</div>
+      </div>
 
-  <div class="project-card reveal">
-    <div class="project-number">03</div>
-    <div class="project-title">Nike Confidential Footwear Innovation</div>
-    <p class="project-desc">Conceptualized and is creating an innovative performance-driven footwear product. Led a team of four, working cross-functionally with key business partners. Conducted thorough scientific review and developed a platform and strategy for the product to excel.</p>
-    <div class="project-skills">Innovation PM · Footwear · Concept Creation · Scientific Research · Strategic Planning</div>
-  </div>
+      <div class="project-card reveal">
+        <div class="project-number">03</div>
+        <div class="project-title">Nike Confidential Footwear Innovation</div>
+        <p class="project-desc">Conceptualized and is creating an innovative performance-driven footwear product. Led a team of four, working cross-functionally with key business partners. Conducted thorough scientific review and developed a platform and strategy for the product to excel.</p>
+        <div class="project-skills">Innovation PM · Footwear · Concept Creation · Scientific Research · Strategic Planning</div>
+      </div>
 
-  <div class="project-card reveal">
-    <div class="project-number">04</div>
-    <div class="project-title">Nike Aerogami & Air Milano</div>
-    <p class="project-desc">Led scientific studies providing design guidance for Nike's Aerogami (moisture-reactive venting for dynamic breathability) and Air Milano (dynamic insulation) jackets. Applied research findings to properly zone technology between genders while reducing costs. Aerogami named a TIME Best Invention of 2023.</p>
-    <div class="project-skills">Cross-Functional Partnership · Scientific Research · Technical Innovation · Athlete-Centered · TIME Best Invention 2023</div>
-  </div>
+      <div class="project-card reveal">
+        <div class="project-number">04</div>
+        <div class="project-title">Nike Aerogami & Air Milano</div>
+        <p class="project-desc">Led scientific studies providing design guidance for Nike's Aerogami (moisture-reactive venting for dynamic breathability) and Air Milano (dynamic insulation) jackets. Applied research findings to properly zone technology between genders while reducing costs. Aerogami named a TIME Best Invention of 2023.</p>
+        <div class="project-skills">Cross-Functional Partnership · Scientific Research · Technical Innovation · Athlete-Centered · TIME Best Invention 2023</div>
+      </div>
 
-  <div class="project-card reveal">
-    <div class="project-number">05</div>
-    <div class="project-title">Nike Flyweb Bra</div>
-    <p class="project-desc">Led scientific studies providing insight and design guidance for the Flyweb Bra — a groundbreaking innovation featured on Faith Kipyegon during her attempt to break the 4-minute mile barrier. Innovated new testing capabilities and methods to holistically understand athletes. Sets the future of women's sport bras.</p>
-    <div class="project-skills">Scientific Innovation · Applied Research · Athlete-Centered · Performance Claims · Storytelling</div>
-  </div>
+      <div class="project-card reveal">
+        <div class="project-number">05</div>
+        <div class="project-title">Nike Flyweb Bra</div>
+        <p class="project-desc">Led scientific studies providing insight and design guidance for the Flyweb Bra — a groundbreaking innovation featured on Faith Kipyegon during her attempt to break the 4-minute mile barrier. Innovated new testing capabilities and methods to holistically understand athletes. Sets the future of women's sport bras.</p>
+        <div class="project-skills">Scientific Innovation · Applied Research · Athlete-Centered · Performance Claims · Storytelling</div>
+      </div>
 
-  <div class="project-card reveal">
-    <div class="project-number">06</div>
-    <div class="project-title">Hurley Wetsuits — Thermal Research</div>
-    <p class="project-desc">Led a research team of eight undergraduate students in thermal physiology research for Hurley's innovation department. Applied findings to redistribute neoprene across the wetsuit, optimizing thermal comfort for surfers while increasing paddling mobility. Determined gender-specific design requirements.</p>
-    <div class="project-skills">Team Leadership · Scientific Planning · Physiology Research · Technical Performance Innovation · Athlete-Centered</div>
-  </div>
+      <div class="project-card reveal">
+        <div class="project-number">06</div>
+        <div class="project-title">Hurley Wetsuits — Thermal Research</div>
+        <p class="project-desc">Led a research team of eight undergraduate students in thermal physiology research for Hurley's innovation department. Applied findings to redistribute neoprene across the wetsuit, optimizing thermal comfort for surfers while increasing paddling mobility. Determined gender-specific design requirements.</p>
+        <div class="project-skills">Team Leadership · Scientific Planning · Physiology Research · Technical Performance Innovation · Athlete-Centered</div>
+      </div>
 
-</div>
-```
-
+    </div>
   </div>
 </section>
 
 <!-- TIMELINE -->
-
 <section class="timeline">
   <div class="section-inner">
     <p class="section-label reveal">Career Arc</p>
@@ -1061,7 +1046,6 @@ nav { padding: 1.2rem 1.5rem; }
 </section>
 
 <!-- SKILLS -->
-
 <section id="skills">
   <div class="section-inner">
     <p class="section-label reveal">Capabilities</p>
@@ -1117,7 +1101,6 @@ nav { padding: 1.2rem 1.5rem; }
 </section>
 
 <!-- EDUCATION -->
-
 <section class="education">
   <div class="section-inner">
     <p class="section-label reveal">Education</p>
@@ -1141,7 +1124,6 @@ nav { padding: 1.2rem 1.5rem; }
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
   <div class="section-inner">
     <p class="section-label reveal">Get in Touch</p>
@@ -1174,7 +1156,6 @@ nav { padding: 1.2rem 1.5rem; }
 </section>
 
 <!-- FOOTER -->
-
 <footer>
   <p>© 2025 Natalie Skillern — Innovation & Project Management</p>
   <p>Beaverton, OR · natalieskillern@gmail.com</p>
